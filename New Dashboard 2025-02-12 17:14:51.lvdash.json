@@ -1,0 +1,18 @@
+{
+  "pages" : [ {
+    "name" : "4765c12c",
+    "displayName" : "Untitled page",
+    "layout" : [ {
+      "widget" : {
+        "name" : "8827c96f",
+        "textbox_spec" : "My Dashboard"
+      },
+      "position" : {
+        "x" : 0,
+        "y" : 1,
+        "width" : 6,
+        "height" : 2
+      }
+    } ]
+  } ]
+}
