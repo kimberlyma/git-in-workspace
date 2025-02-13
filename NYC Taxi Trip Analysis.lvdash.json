@@ -121,51 +121,45 @@
               "name" : "day_of_week",
               "expression" : "`day_of_week`"
             }, {
-              "name" : "fare_amount",
-              "expression" : "`fare_amount`"
-            }, {
               "name" : "trip_distance",
               "expression" : "`trip_distance`"
+            }, {
+              "name" : "fare_amount",
+              "expression" : "`fare_amount`"
             } ],
             "disaggregated" : true
           }
         } ],
         "spec" : {
+          "version" : 3,
+          "widgetType" : "scatter",
           "encodings" : {
-            "color" : {
-              "displayName" : "Day of Week",
-              "fieldName" : "day_of_week",
-              "scale" : {
-                "type" : "categorical"
-              }
-            },
             "x" : {
-              "axis" : {
-                "title" : "Trip Distance (miles)"
-              },
-              "displayName" : "trip_distance",
               "fieldName" : "trip_distance",
               "scale" : {
                 "type" : "quantitative"
-              }
+              },
+              "displayName" : "trip_distance"
             },
             "y" : {
-              "axis" : {
-                "title" : "Fare Amount (USD)"
-              },
-              "displayName" : "fare_amount",
               "fieldName" : "fare_amount",
               "scale" : {
                 "type" : "quantitative"
-              }
+              },
+              "displayName" : "fare_amount"
+            },
+            "color" : {
+              "fieldName" : "day_of_week",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "day_of_week"
             }
           },
           "frame" : {
-            "showTitle" : true,
-            "title" : "Daily Fare Trends by Day of Week"
-          },
-          "version" : 3,
-          "widgetType" : "scatter"
+            "title" : "Daily Fare Trends by Day of Week",
+            "showTitle" : true
+          }
         }
       },
       "position" : {
