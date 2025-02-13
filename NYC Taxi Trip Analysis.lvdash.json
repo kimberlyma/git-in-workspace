@@ -575,6 +575,71 @@
         "width" : 2,
         "height" : 1
       }
+    }, {
+      "widget" : {
+        "name" : "9258e218",
+        "queries" : [ {
+          "name" : "main_query",
+          "query" : {
+            "datasetName" : "3f5450e6",
+            "fields" : [ {
+              "name" : "avg(fare_amount)",
+              "expression" : "AVG(`fare_amount`)"
+            }, {
+              "name" : "day_of_week",
+              "expression" : "`day_of_week`"
+            }, {
+              "name" : "trip_distance",
+              "expression" : "`trip_distance`"
+            } ],
+            "disaggregated" : false
+          }
+        } ],
+        "spec" : {
+          "version" : 3,
+          "widgetType" : "heatmap",
+          "encodings" : {
+            "x" : {
+              "fieldName" : "day_of_week",
+              "scale" : {
+                "type" : "categorical"
+              },
+              "displayName" : "day_of_week"
+            },
+            "y" : {
+              "fieldName" : "trip_distance",
+              "scale" : {
+                "type" : "quantitative"
+              },
+              "displayName" : "trip_distance"
+            },
+            "color" : {
+              "fieldName" : "avg(fare_amount)",
+              "scale" : {
+                "type" : "quantitative",
+                "colorRamp" : {
+                  "mode" : "scheme",
+                  "scheme" : "reds"
+                }
+              },
+              "displayName" : "Average fare_amount"
+            },
+            "label" : {
+              "show" : false
+            }
+          },
+          "frame" : {
+            "title" : "Heatmap of Taxi Ride Distances by Day of the Week",
+            "showTitle" : true
+          }
+        }
+      },
+      "position" : {
+        "x" : 2,
+        "y" : 2,
+        "width" : 3,
+        "height" : 6
+      }
     } ]
   } ]
 }
